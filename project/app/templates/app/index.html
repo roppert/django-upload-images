@@ -24,7 +24,7 @@
         <div class="thumbnails">
         {% for image in gallery.active_images.all %}
         <figure>
-            <a href="{{ MEDIA_URL }}{{ image.image }}" title="Click to view entire image"><img src="{{ MEDIA_URL }}{{ image.image }}"/></a>
+            <a href="{{ image.image.url }}" title="Click to view entire image"><img src="{{ image.image.url }}"/></a>
             <a href="{% url 'image' image.id %}"><img class="icon" title="Edit" src="{% static 'edit.png' %}"></a>
             <figcaption>
                 <p>{{ image.description }}</p>
