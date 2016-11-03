@@ -5,6 +5,9 @@
 
 {% block main %}
     <div class="image-form">
+        {% if form.instance and form.instance.image %}
+        <img class="preview" src="{{ form.instance.image.url }}"/>
+        {% endif %}
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}

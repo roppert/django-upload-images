@@ -106,3 +106,7 @@ form p textarea {
 form p button {
   flex-basis: 100%;
 }
+
+div.image-form img {
+  max-width: 100%;
+}
