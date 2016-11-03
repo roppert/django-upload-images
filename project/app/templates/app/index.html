@@ -1,0 +1,37 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block title %}Gallery index{% endblock title %}
+
+{% block aside %}
+      <h1>About</h1>
+      <p>Simple project to demonstrate image upload and selection.</p>
+{% endblock aside %}
+
+{% block main %}
+    {% if not galleries %}
+    <p>No galleries found</p>
+    {% endif %}
+
+    {% for gallery in galleries %}
+    <div class="gallery">
+        <h1><a href="{% url 'gallery' gallery.id %}">{{ gallery.name|capfirst }}</a></h1>
+        <p>{{ gallery.description }}</p>
+        <ul>
+            <li><strong>Active:</strong> {{ gallery.active }}</li>
+            <li><strong>Autoplay:</strong> {{ gallery.autoplay }}</li>
+        </ul>
+        <div class="thumbnails">
+        {% for image in gallery.active_images.all %}
+        <figure>
+            <a href="{{ MEDIA_URL }}{{ image.image }}" title="Click to view entire image"><img src="{{ MEDIA_URL }}{{ image.image }}"/></a>
+            <a href="{% url 'image' image.id %}"><img class="icon" title="Edit" src="{% static 'edit.png' %}"></a>
+            <figcaption>
+                <p>{{ image.description }}</p>
+            </figcaption>
+        </figure>
+        {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+{% endblock main %}

@@ -1,0 +1,16 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block title %}Images Yo!{% endblock title %}
+
+{% block main %}
+    <div class="image-form">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p>
+                <button>Save</button>
+            </p>
+        </form>
+    </div>
+{% endblock main %}

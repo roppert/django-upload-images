@@ -1,0 +1,108 @@
+div.gallery ul {
+    font-size: smaller;
+    flex-direction: column;
+    padding: 0;
+}
+div.gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+div.gallery ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+div.gallery ul li {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+div.gallery .thumbnails {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div.thumbnails figure {
+  padding: 0;
+  margin: 0 auto 0 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 25%;
+}
+
+div.thumbnails figure figcaption {
+  display: flex;
+  font-size: smaller;
+  flex-basis: 25%;
+}
+
+div.thumbnails figure a {
+  display: flex;
+}
+
+div.thumbnails figure p {
+  padding-right: 24px;
+}
+
+div.thumbnails figure a img {
+  max-width: 128px;
+  max-height: 128px;
+}
+
+div.thumbnails img.icon {
+    max-width: 16px;
+    max-height: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form * {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form ul {
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+form li {
+  display: flex;
+  align-items: flex-start;
+}
+
+form li label {
+  margin-top: 12px;
+}
+
+form li label img {
+  max-width: 128px;
+  max-height: 128px;
+}
+
+form p {
+  flex-direction: row;
+}
+
+form p label {
+}
+
+form p input[type="text"] {
+  flex-basis: 100%;
+}
+
+form p textarea {
+  flex-basis: 100%;
+}
+
+form p button {
+  flex-basis: 100%;
+}

@@ -1,0 +1,11 @@
+venv
+*.pyc
+*~
+.DS_Store
+__pycache__
+.cache
+.*.swp
+.*.swo
+.*.swn
+*.log
+db.sqlite3

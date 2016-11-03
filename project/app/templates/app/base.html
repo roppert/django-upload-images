@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'app/gallery.css' %}?v=1">
+{% endblock css %}
+
+{% block navitems %}
+  <li><a href="{% url 'gallery' %}">Add gallery</a></li>
+  <li><a href="{% url 'image' %}">Add image</a></li>
+{% endblock navitems %}
+

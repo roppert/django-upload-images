@@ -1,0 +1,16 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block title %}Gallery{% endblock title %}
+
+{% block main %}
+    <div class="gallery-form">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p>
+                <button>Save</button>
+            </p>
+        </form>
+    </div>
+{% endblock main %}
